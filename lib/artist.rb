@@ -20,7 +20,7 @@ class Artist
   end
   
   extend Memorable #for count & reset_all methods
-
+  extend Findable
   def add_song(song)
     @songs << song
     song.artist = self
