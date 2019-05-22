@@ -17,6 +17,7 @@ class Artist
   
   extend Memorable #for count & reset_all methods
   extend Findable
+  include Paramable
   
   def add_song(song)
     @songs << song
