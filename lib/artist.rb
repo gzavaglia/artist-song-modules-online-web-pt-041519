@@ -1,6 +1,11 @@
 require 'pry'
 
 class Artist
+  extend Memorable::ClassMethods #for count & reset_all methods
+  extend Findable
+  include Paramable
+  include Memorable::InstanceMethods
+  
   attr_accessor :name
   attr_reader :songs
 
@@ -16,9 +21,10 @@ class Artist
     @@artists
   end
   
-  extend Memorable #for count & reset_all methods
-  extend Findable
-  include Paramable
+  # extend Memorable::ClassMethods #for count & reset_all methods
+  # extend Findable
+  # include Paramable
+  # include Memorable::InstanceMethods
   
   def add_song(song)
     @songs << song
