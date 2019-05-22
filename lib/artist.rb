@@ -19,14 +19,7 @@ class Artist
     @@artists
   end
   
-  extend Memorable
-  # def self.reset_all
-  #   self.all.clear
-  # end
-
-  # def self.count
-  #   self.all.count
-  # end
+  extend Memorable #for count & reset_all methods
 
   def add_song(song)
     @songs << song
